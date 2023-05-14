@@ -1,8 +1,8 @@
-let adidas = {model: 'adidas', marime: 35, culoare: 'verde', material: 'textil', calitate: 'superbuna'}
-let nike = {model: 'nike', marime: 42, culoare: 'maro', material: 'piele intoarsa'}
-let reebok = {model: 'reebook', marime: 31, culoare: 'rosul', material: 'goretex'}
-let puma = {model: 'puma', marime: 39, culoare: 'negru', material: 'pielel'}
-let fila = {model: 'fila', marime: 37, culoare: 'albastru', material: 'panza'}
+let adidas = {model: 'adidas', marime: 35, culoare: 'verde', material: 'textil', calitate: 'xxl', pret: 555}
+let nike = {model: 'nike', marime: 42, culoare: 'maro', material: 'piele intoarsa', calitate: 'xxl', pret: 555}
+let reebok = {model: 'reebook', marime: 31, culoare: 'rosul', material: 'goretex', calitate: 'xxl', pret: 555}
+let puma = {model: 'puma', marime: 39, culoare: 'negru', material: 'pielel', calitate: 'xxl', pret: 555}
+let fila = {model: 'fila', marime: 37, culoare: 'albastru', material: 'panza', calitate: 'xxl', pret: 555}
 
 let back_end_resources = [adidas, nike, reebok, puma, fila]
 
@@ -39,11 +39,12 @@ buton_afiseaza_tabel.onclick = () => {
     //declar o variabila unde salvez colectia de checkboxuri care sunt checked
     let checkboxes = document.querySelectorAll('input:checked')
 
-    // declar un array gol unde voi salva valoarile checkbox-urilor care sunt checked
+    // declar un array gol unde voi salva valoarile checkbox-urilor care sunt checked.
     let thdinamic = []
     checkboxes.forEach((checkbox) => {
         thdinamic.push(checkbox.value)
     })
+
 
     // creez un for loop care sa treaca prin array-ul cu valorile checkbox-urilor si sa creeze un tr
     // si un th pentru fiecare. Acestea vor fi headerele, fiecare pe alt rand.
@@ -55,8 +56,7 @@ buton_afiseaza_tabel.onclick = () => {
         tabel.appendChild(newrow)
 
         //creez un al 2lea for loop care sa treaca prin obiectul back_end_resources
-        //si sa creeze un td pt fiecare pozitie prin care trece. Fiecare pozitie prin
-        //care trece este un alt obiect cu proprietati iar innertext-ul td-ului va fi
+        //si sa creeze un td pt fiecare pozitie prin care trece. Innertext-ul td-ului va fi
         //valoarea proprietatii din loop-ul i din pozitia j a obiectului principal.
         //Nu prea stiu sa explic mai bine, mi se pare ca am complicat explicatia oricum.
         for (let j = 0; j < back_end_resources.length; j++) {
