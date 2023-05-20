@@ -1,5 +1,7 @@
 # Dinamic-Table
+
 Dinamic Table Project / tema 3
+
 Avem un tablou numit "adidasi" care contine mai multe obiecte care contin 4 sau mai multe proprietati.
 Aceste proprietati pot fi: model, marime, material, calitate, pret, etc
 Folosind WebStorm, creati o aplicatie care sa contina diferite checkbox-uri sau optiuni care pot fi selectate
